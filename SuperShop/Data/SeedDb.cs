@@ -1,8 +1,7 @@
-﻿using SuperShop.Data.Entities;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using SuperShop.Data.Entities;
 
 namespace SuperShop.Data
 {
@@ -22,7 +21,7 @@ namespace SuperShop.Data
         {
             await _context.Database.EnsureCreatedAsync();
 
-            if(!_context.Products.Any())
+            if (!_context.Products.Any())
             {
                 AddProduct("iPhone X");
                 AddProduct("Magic Mouse");
