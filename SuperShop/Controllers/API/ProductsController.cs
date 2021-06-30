@@ -1,10 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SuperShop.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SuperShop.Controllers.API
 {
@@ -14,7 +9,7 @@ namespace SuperShop.Controllers.API
     {
         private readonly IProductRepository _productRepository;
 
-        public ProductsController(IProductRepository productRepository) 
+        public ProductsController(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
@@ -22,7 +17,7 @@ namespace SuperShop.Controllers.API
         [HttpGet]
         public IActionResult GetProducts()
         {
-            return Ok(_productRepository.GetAll());
+            return Ok(_productRepository.GetAllWithUsers());
         }
 
 
