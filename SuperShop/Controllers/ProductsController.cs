@@ -78,8 +78,8 @@ namespace SuperShop.Controllers
 
                 var product = _converterHelper.ToProduct(model, imageId, true);
 
-                //TODO: MODIFICAR PARA O USER QUE TIVER LOGADO
-                product.User = await _userHelper.GetUserByEmailAsync("luisandresalgueiro@gmail.com");
+                
+                product.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                 await _productRepository.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
@@ -125,8 +125,8 @@ namespace SuperShop.Controllers
 
                     var product = _converterHelper.ToProduct(model, imageId, false);
 
-                    //TODO: MODIFICAR PARA O USER QUE TIVER LOGADO
-                    product.User = await _userHelper.GetUserByEmailAsync("luisandresalgueiro@gmail.com");
+                    
+                    product.User = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
                     await _productRepository.UpdateAsync(product);
 
                 }
@@ -147,6 +147,7 @@ namespace SuperShop.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
