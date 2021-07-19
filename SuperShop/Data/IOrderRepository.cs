@@ -1,4 +1,5 @@
 ﻿using SuperShop.Data.Entities;
+using SuperShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace SuperShop.Data
         Task<IQueryable<OrderDetailTemp>> GetDetailTempsAsync(string userName);
 
 
+        Task AddItemToOrderAsync(AddItemViewModel model, string userName);
+
+
+        Task ModifyOrderDetailTempQuantityAsync(int id, double quantity);
     }
 
 
