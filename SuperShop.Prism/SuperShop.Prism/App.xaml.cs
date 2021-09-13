@@ -3,6 +3,7 @@ using Prism.Ioc;
 using SuperShop.Prism.Services;
 using SuperShop.Prism.ViewModels;
 using SuperShop.Prism.Views;
+using Syncfusion.Licensing;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
@@ -18,6 +19,8 @@ namespace SuperShop.Prism
 
         protected override async void OnInitialized()
         {
+            SyncfusionLicenseProvider.RegisterLicense("NDk3NjIwQDMxMzkyZTMyMmUzMFZkd09XWEpIaXdvcU5MZnVTRWIxRTYwaThhK1NZT0crSnZGa3pxTDlTN0U9");
+
             InitializeComponent();
 
             await NavigationService.NavigateAsync("NavigationPage/ProductsPage");
@@ -30,6 +33,7 @@ namespace SuperShop.Prism
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<ProductsPage, ProductsPageViewModel>();
+            containerRegistry.RegisterForNavigation<ProductDetailPage, ProductDetailPageViewModel>();
         }
     }
 }
