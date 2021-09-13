@@ -9,7 +9,36 @@
         <ResourceDictionary>
             <!--Parameters-->
             <x:String x:Key="UrlAPI">https://supershoptpsils.azurewebsites.net/</x:String>
-            
+
+            <!--  Colors  -->
+            <Color x:Key="ColorBackground">#F0F0F2</Color>
+            <Color x:Key="ColorPrimary">#589EA6</Color>
+            <Color x:Key="ColorSecondary">#75BFBF</Color>
+            <Color x:Key="ColorDanger">#496373</Color>
+            <Color x:Key="ColorAccent">#496373</Color>
+            <Color x:Key="ColorFont">#364F59</Color>
+            <Color x:Key="ColorFontInverse">#F0F0F2</Color>
+
+            <!--  Styles  -->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorPrimary}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor" Value="{StaticResource ColorFontInverse}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorFont}" />
+            </Style>
+
+            <Style x:Key="SecondaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorSecondary}" />
+            </Style>
+
+            <Style x:Key="DangerButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorDanger}" />
+            </Style>
+
+
         </ResourceDictionary>
 
   </Application.Resources>
