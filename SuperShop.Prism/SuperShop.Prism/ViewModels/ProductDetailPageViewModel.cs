@@ -1,14 +1,9 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using Prism.Navigation;
+﻿using Prism.Navigation;
 using SuperShop.Prism.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace SuperShop.Prism.ViewModels
 {
-    public class ProductDetailPageViewModel :   ViewModelBase
+    public class ProductDetailPageViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
         private ProductResponse _product;
@@ -25,7 +20,7 @@ namespace SuperShop.Prism.ViewModels
         }
 
         public override void OnNavigatedTo(INavigationParameters parameters)
-        { 
+        {
             base.OnNavigatedTo(parameters);
 
             if (parameters.ContainsKey("product"))
