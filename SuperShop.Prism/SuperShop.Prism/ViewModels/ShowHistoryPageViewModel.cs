@@ -1,0 +1,13 @@
+﻿using Prism.Navigation;
+using SuperShop.Prism.Helpers;
+
+namespace SuperShop.Prism.ViewModels
+{
+    public class ShowHistoryPageViewModel : ViewModelBase
+    {
+        public ShowHistoryPageViewModel(INavigationService navigationService) : base(navigationService)
+        {
+            Title = Languages.ShowPurchaseHistory;
+        }
+    }
+}

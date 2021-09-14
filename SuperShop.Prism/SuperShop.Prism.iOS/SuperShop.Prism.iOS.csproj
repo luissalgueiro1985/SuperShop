@@ -215,5 +215,47 @@
       <Name>SuperShop.Prism</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_action_menu-20x20%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-29x29%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-40x40%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-40x40%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-40x40%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-60x60%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-60x60%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-76x76%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-76x76%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-App-83.5x83.5%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_action_menu-20x20%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_action_menu-20x20%402x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
